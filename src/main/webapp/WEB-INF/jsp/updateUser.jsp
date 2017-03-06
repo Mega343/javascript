@@ -108,6 +108,7 @@
                             <input title="Enter city name." class="form-control input-md" type="text" name="cityName"
                                    value="${user.cityName}"
                                    id="cityName">
+                            <span style="color:red" id="cityNameError"></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4">
@@ -116,6 +117,7 @@
                             <input title="Enter street name." class="form-control input-md" type="text"
                                    name="streetName"
                                    value="${user.streetName}" id="streetName">
+                            <span style="color:red" id="streetNameError"></span>
                         </div>
                     </div>
                 </div>
@@ -127,6 +129,7 @@
                             <input title="Enter house number." class="form-control input-md" type="text"
                                    name="houseNumber"
                                    value="${user.houseNumber}" id="houseNumber">
+                            <span style="color:red" id="houseNumberError"></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4">
@@ -135,6 +138,7 @@
                             <input title="Enter flat number." class="form-control input-md" type="text"
                                    name="flatNumber"
                                    value="${user.flatNumber}" id="flatNumber">
+                            <span style="color:red" id="flatNumberError"></span>
                         </div>
                     </div>
                 </div>
@@ -175,6 +179,7 @@
                             <input title="Enter document series." class="form-control input-md" type="text"
                                    name="series" value="${user.series}"
                                    id="series">
+                            <span style="color:red" id="seriesError"></span>
                         </div>
                     </div>
                 </div>
@@ -186,6 +191,7 @@
                             <input title="Enter document number." class="form-control input-md" type="text"
                                    name="number" value="${user.number}"
                                    id="number">
+                            <span style="color:red" id="numberError"></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4">
@@ -194,6 +200,7 @@
                             <input title="Enter the name of the organization issuing the document."
                                    class="form-control input-md" type="text" name="issuedBy" value="${user.issuedBy}"
                                    id="issuedBy">
+                            <span style="color:red" id="issuedByError"></span>
                         </div>
                     </div>
                 </div>
@@ -205,6 +212,7 @@
                             <input title="Enter the date of issuance of the document." class="form-control input-md"
                                    type="text" name="dateOfIssue"
                                    value="${user.dateOfIssue}" id="dateOfIssue">
+                            <span style="color:red" id="dateOfIssueError"></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4">
@@ -213,6 +221,7 @@
                             <input title="Karma should be equals or greater than 0." class="form-control input-md"
                                    type="text" name="karma"
                                    value="${user.karma}" id="karma">
+                            <span style="color:red" id="karmaError"></span>
                         </div>
                     </div>
                 </div>
