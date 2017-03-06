@@ -34,7 +34,7 @@ var tooltip = {
         var l = a.length;
         for (var i = 0; i < l; i++) {
 
-            if (!a[i] || tooltip.options.skip_tags.in_array(a[i].tagName.toLowerCase()))
+            if (!a[i] || in_array(a[i].tagName.toLowerCase()))
                 continue;
 
             var tooltip_title = a[i].getAttribute("title");
@@ -138,7 +138,7 @@ var tooltip = {
     }
 }
 
-Array.prototype.in_array = function (value) {
+in_array = function (value) {
     var l = this.length;
     for (var i = 0; i < l; i++)
         if (this[i] === value)
