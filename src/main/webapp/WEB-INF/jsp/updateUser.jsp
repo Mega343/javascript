@@ -233,7 +233,8 @@
                     </div>
                 </div>
             </form>
-            <script src="/resources/js/formValidation.js"></script>
+                                   <c:url value="/resources/js/formValidation.js" var="validatorJsUrl"/>
+                                   <script src="${validatorJsUrl}"></script>
         </div>
 </jsp:attribute>
     <jsp:attribute name="action">admin</jsp:attribute>
