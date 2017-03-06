@@ -1,15 +1,15 @@
 var tooltip = {
 
-    /* НАЧАЛО НАСТРОЕК */
+
     options: {
-        attr_name: "tooltip", // наименование создаваемого атрибута всплывающей подсказки
-        blank_text: "", // текст для ссылок с target="_blank"
-        newline_entity: "  ", // укажите пустую строку (""), если не хотите использовать во всплывающих подсказках многострочность; если хотите, то укажите тот символ или символы, которые будут заменяться на перевод строки
-        max_width: 0, // максимальная ширина всплывающей подсказки в пикселах; обнулите это значение, если ширина должна быть нелимитирована
-        delay: 100, // задержка перед показом всплывающей подсказки в миллисекундах
-        skip_tags: ["link", "style"] // теги, у которых не обрабатываем атрибуты alt и title
+        attr_name: "tooltip",
+        blank_text: "",
+        newline_entity: "  ",
+        max_width: 0,
+        delay: 100,
+        skip_tags: ["link", "style"]
     },
-    /* КОНЕЦ НАСТРОЕК */
+
 
     t: document.createElement("DIV"),
     c: null,
@@ -30,14 +30,14 @@ var tooltip = {
         document.body.appendChild(tooltip.t);
         if (tooltip.options.max_width)
             tooltip.t.style.maxWidth = tooltip.options.max_width + "px"; // all but ie
-        var a = document.all && !window.opera ? document.all : document.getElementsByTagName("*"); // in opera 9 document.all produces type mismatch error
+        var a = document.all && !window.opera ? document.all : document.getElementsByTagName("*");
         var l = a.length;
         for (var i = 0; i < l; i++) {
 
             if (!a[i] || tooltip.options.skip_tags.in_array(a[i].tagName.toLowerCase()))
                 continue;
 
-            var tooltip_title = a[i].getAttribute("title"); // returns form object if IE & name="title"; then IE crashes; so...
+            var tooltip_title = a[i].getAttribute("title");
             if (tooltip_title && typeof tooltip_title != "string")
                 tooltip_title = "";
 
@@ -111,7 +111,7 @@ var tooltip = {
 
     l: function (o, e, a) {
         if (o.addEventListener)
-            o.addEventListener(e, a, false); // was true--Opera 7b workaround!
+            o.addEventListener(e, a, false);
         else if (o.attachEvent)
             o.attachEvent("on" + e, a);
         else
