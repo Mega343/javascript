@@ -7,6 +7,8 @@
 <%@attribute name="actionDescription" %>
 <%@attribute name="table" fragment="true" %>
 <c:url value="/resources/dashboard/dashboard.css" var="cssUrl"/>
+<c:url value="/resources/css/bootstrap.min.css" var="bootCssUrl"/>
+<c:url value="/resources/js/highlight.js" var="highlightJsUrl"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +19,7 @@
     <meta name="description" content="">
     <meta name="Arthur Segeda" content="">
     <link rel="icon" href="/resources/images/icon.png">
-    <script type="text/javascript" src="/resources/js/highlight.js"></script>
+    <script type="text/javascript" src="${highlightJsUrl}"></script>
     <style type="text/css">
         /* Определяем стили для подсвечивания строк */
         .hoverRow { background-color: yellow; }
@@ -25,7 +27,7 @@
     </style>
     <title>${title}</title>
     <!-- Bootstrap core CSS -->
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${bootCssUrl}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="${cssUrl}" type="text/css" rel="stylesheet">
 </head>
