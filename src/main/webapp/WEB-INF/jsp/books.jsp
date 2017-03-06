@@ -6,7 +6,7 @@
     <jsp:attribute name="tableName">Books</jsp:attribute>
     <jsp:attribute name="error">${error}</jsp:attribute>
     <jsp:attribute name="table">
-     <table class="table table-striped">
+     <table class="table" id="books">
         <thead>
         <tr>
             <th>Book ID</th>
@@ -64,6 +64,9 @@
                     </c:forEach>
                     </tbody>
         </table>
+        <script type="text/javascript">
+            highlightTableRows("books","hoverRow","clickedRow");
+        </script>
     </jsp:attribute>
     <jsp:attribute name="action">add_book</jsp:attribute>
     <jsp:attribute name="actionDescription">Add new Book</jsp:attribute>

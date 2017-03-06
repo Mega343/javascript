@@ -6,7 +6,7 @@
     <jsp:attribute name="tableName">Users</jsp:attribute>
     <jsp:attribute name="error">${error}</jsp:attribute>
     <jsp:attribute name="table">
-    <table class="table table-striped" id="Users">
+    <table class="table" id="users">
         <thead>
         <tr>
             <th>User ID</th>
@@ -60,8 +60,7 @@
         </c:forEach>
         </tbody>
         <script type="text/javascript">
-            //Подсветка по клику и при наведении мышки на ряд, множественный выбор по клику разрешен
-            highlightTableRows("Users","hoverRow","clickedRow");
+            highlightTableRows("users","hoverRow","clickedRow");
         </script>
     </table>
     </jsp:attribute>

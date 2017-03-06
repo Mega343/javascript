@@ -20,11 +20,6 @@
     <meta name="Arthur Segeda" content="">
     <link rel="icon" href="/resources/images/icon.png">
     <script type="text/javascript" src="${highlightJsUrl}"></script>
-    <style type="text/css">
-        /* Определяем стили для подсвечивания строк */
-        .hoverRow { background-color: yellow; }
-        .clickedRow { background-color: orange; }
-    </style>
     <title>${title}</title>
     <!-- Bootstrap core CSS -->
     <link href="${bootCssUrl}" rel="stylesheet">

@@ -183,6 +183,10 @@
                     <label class="col-2 col-form-label">User Karma</label>
                     <input class="form-control input-md" type="text" name="karma" value="${user.karma}" id="karma">
                 </div>
+                <div visibility="hidden" position="absolute">
+                    <h2 onmouseover="tooltip(this,'Это просто пример всплывающей<br /> подсказки JavaScript!')" onmouseout="hide_info(this)">
+                        It is just JavaScript Tooltip example!</h2>
+                </div>
             </div>
         </div>
 
@@ -190,10 +194,11 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit" style="WIDTH: 235px; HEIGHT: 51px">Update
             </button>
         </div>
+
+        <script src="/resources/js/helper.js.js"></script>
     </form>
 </div>
 </jsp:attribute>
     <jsp:attribute name="action">admin</jsp:attribute>
     <jsp:attribute name="actionDescription">Back</jsp:attribute>
-    <script src="/resources/js/formValidation.js"></script>
 </t:admin>

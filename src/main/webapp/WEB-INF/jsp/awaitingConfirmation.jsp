@@ -6,7 +6,7 @@
     <jsp:attribute name="tableName">Users awaiting confirmation</jsp:attribute>
     <jsp:attribute name="error">${error}</jsp:attribute>
     <jsp:attribute name="table">
-     <table class="table table-striped">
+     <table class="table" id="awaitingConfirmation">
         <thead>
         <tr>
             <th>User ID</th>
@@ -53,6 +53,9 @@
                     </c:forEach>
                     </tbody>
         </table>
+        <script type="text/javascript">
+            highlightTableRows("awaitingConfirmation","hoverRow","clickedRow");
+        </script>
     </jsp:attribute>
     <jsp:attribute name="action">admin</jsp:attribute>
     <jsp:attribute name="actionDescription">Back</jsp:attribute>
