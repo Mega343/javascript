@@ -12,7 +12,7 @@
         <script src="${helperJsUrl}"></script>
         <div class="col-xs-12 col-sm-12 col-md-12">
 
-            <form class="form-signin" action="update" method="post" onsubmit="return validateForm()">
+            <form class="form-signin" id="updateUser" action="update" method="post" onsubmit="return validateForm()">
 
                 <div class="row">
                     <div class="col-xs-4 col-sm-4 col-md-4">
