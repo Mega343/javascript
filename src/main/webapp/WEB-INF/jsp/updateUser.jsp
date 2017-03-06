@@ -1,13 +1,28 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:admin title="User Update">
+
     <jsp:attribute name="error">${error}</jsp:attribute>
-<jsp:attribute name="table">
-<div class="col-xs-12 col-sm-12 col-md-12">
-    <form class="form-signin" action="update" method="post">
+    <jsp:attribute name="table">
+        <c:url value="/resources/js/helper.js" var="helperJsUrl"/>
+        <script src="${helperJsUrl}"></script>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <style type="text/css">
+                #tooltip {
+                    background: #FFFFFF;
+                    border: 1px solid #666666;
+                    color: #333333;
+                    margin: 0px;
+                    padding: 3px 5px;
+                    position: absolute;
+                    visibility: hidden;
+                }
+            </style>
+            <form class="form-signin" action="update" method="post">
 
         <div class="row">
             <div class="col-xs-4 col-sm-4 col-md-4">
@@ -181,21 +196,15 @@
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group row">
                     <label class="col-2 col-form-label">User Karma</label>
-                    <input class="form-control input-md" type="text" name="karma" value="${user.karma}" id="karma">
-                </div>
-                <div visibility="hidden" position="absolute">
-                    <h2 onmouseover="tooltip(this,'Это просто пример всплывающей<br /> подсказки JavaScript!')" onmouseout="hide_info(this)">
-                        It is just JavaScript Tooltip example!</h2>
+                    <input title="Пример подсказки" class="form-control input-md" type="text" name="karma" value="${user.karma}" id="karma">
                 </div>
             </div>
         </div>
-
-        <div class="form-group row">
+                <div class="block2" id="mess">
+                    <div class="form-group row">
             <button class="btn btn-lg btn-primary btn-block" type="submit" style="WIDTH: 235px; HEIGHT: 51px">Update
             </button>
         </div>
-
-        <script src="/resources/js/helper.js.js"></script>
     </form>
 </div>
 </jsp:attribute>
