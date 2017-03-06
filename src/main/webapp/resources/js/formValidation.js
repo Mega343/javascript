@@ -150,5 +150,6 @@ function validate(form, options) {
             }
         }
     }
+
     return isValid;
 }
